@@ -53,6 +53,11 @@ for(let i = 0; i < navList.length; i++){
   navList[i].innerHTML = siteContent["nav"]["nav-item-"+(i+1)];
 }
 
+for(let i = 0; i < navList.length; i++){
+  navList[i].style = "color: black";
+  navList[i].style.backgroundColor = "coral";
+}
+
 
 //code snippet img
 
@@ -64,18 +69,21 @@ cdeSnipImg.setAttribute('src', siteContent["img"]["header-img"]);
 // ---------------------------CTA SECTION ----------------------------
 //h1 'DOM is Awesome text
 const ctaContent = document.querySelector(".cta-text");
-
+ctaContent.style.backgroundColor = "aqua";
 
 ctaContent.childNodes[1].innerHTML = siteContent["cta"]["h1"];
+ctaContent.childNodes[1].style.backgroundColor = "coral";
 
 //cta button
 ctaContent.childNodes[3].innerHTML = siteContent["cta"]["button"];
+ctaContent.childNodes[3].style.backgroundColor = "goldenrod";
 // ----------------------------END OF CTA STUFF -----------------------
 
 // ----------------------------MAIN CONTENT----------------------------
 //Image of codesnip across screen 
 const CdeSnipImgMid = document.getElementById("middle-img");
 CdeSnipImgMid.setAttribute('src', siteContent['img']['mid-page-img']);
+
 
 
 //top content
@@ -85,10 +93,14 @@ const topContent = document.querySelector(".top-content");
 
 //features
 topContent.childNodes[1].children[0].innerHTML = siteContent['main-content']['features-h4'];
+topContent.childNodes[1].children[0].style.backgroundColor = "aquamarine";
 topContent.childNodes[1].children[1].innerHTML = siteContent['main-content']['features-content'];
+topContent.childNodes[1].children[1].style.backgroundColor = "coral";
+topContent.childNodes[3].children[1].style.backgroundColor = "coral";
 
 //about
 topContent.childNodes[3].children[0].innerHTML = siteContent['main-content']['about-h4'];
+topContent.childNodes[3].children[0].style.backgroundColor = "aquamarine";
 topContent.childNodes[3].children[1].innerHTML = siteContent['main-content']['about-content'];
 //------------------------------------END OF TOP CONTENT --------------------
 
@@ -99,14 +111,20 @@ const bottContent = document.querySelector(".bottom-content");
 
 //services
 bottContent.childNodes[1].children[0].innerHTML = siteContent['main-content']['services-h4'];
+bottContent.childNodes[1].children[0].style.backgroundColor = "aquamarine";
 bottContent.childNodes[1].children[1].innerHTML = siteContent['main-content']['services-content'];
+bottContent.childNodes[1].children[1].style.backgroundColor = "coral";
+bottContent.childNodes[3].children[1].style.backgroundColor = "coral";
+bottContent.childNodes[5].children[1].style.backgroundColor = "coral";
 
 //product
 bottContent.childNodes[3].children[0].innerHTML = siteContent['main-content']['product-h4'];
+bottContent.childNodes[3].children[0].style.backgroundColor = "aquamarine";
 bottContent.childNodes[3].children[1].innerHTML = siteContent['main-content']['services-content'];
 
 //vision
 bottContent.childNodes[5].children[0].innerHTML = siteContent['main-content']['vision-h4'];
+bottContent.childNodes[5].children[0].style.backgroundColor = "aquamarine";
 bottContent.childNodes[5].children[1].innerHTML = siteContent['main-content']['vision-content'];
 //---------------------------------END OF BOTTOM CONTENT ----------------------
 
@@ -115,6 +133,8 @@ bottContent.childNodes[5].children[1].innerHTML = siteContent['main-content']['v
 //---------------------------------CONTACT SECTION ----------------------------
 
 const contactSect = document.querySelector(".contact");
+contactSect.style.backgroundColor = "aquamarine";
+
 
 //conact h4
 contactSect.childNodes[1].innerHTML = siteContent['contact']['contact-h4'];
